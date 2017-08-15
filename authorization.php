@@ -14,7 +14,7 @@ if($conn->connect_error){
 die("connection failed : " .$conn->connect_error);
 }
 
-$sql="SELECT * FROM users where Email='$email' AND Password='$password' limit 1 ";
+$sql="SELECT * FROM users where Email='$email' AND Password='$password' limit 1 "; // users(Name , City  Email Interest ID Password )
 $rslt=$conn->query($sql);
 if($rslt->num_rows>0){ 
 while($row=$rslt->fetch_assoc()){ 
